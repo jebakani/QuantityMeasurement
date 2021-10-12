@@ -23,60 +23,55 @@
                     <p class="para">Volume</p>
                 </mat-card>
             </div>
-            <div>
+            <div class="inputcontainer">
                 <div *ngIf="measure == 'length'" class="valueContent">
-                    <div>
+                    <div class="datacontent">
                         <p>from</p>
                         <input class="dataamount" > 
-                        <mat-select class="form-control">
+                        <mat-select class="measumentSelect">
                             <mat-option value="meter" selected disabled>meter</mat-option>
-                            
-                            <mat-option *ngFor="let data of someList" value="{{data}}">{{data}}</mat-option>
+                            <mat-option *ngFor="let data of LengthList" value="{{data}}">{{data}}</mat-option>
                         </mat-select>
                     </div>
-                    <div>
+                    <div class="datacontent">
                         <p>to</p>
                         <input class="dataamount" > 
-                        <mat-select class="form-control">
+                        <mat-select class="measumentSelect">
                             <mat-option value="meter" >meter</mat-option>
-                            <mat-option *ngFor="let data of someList" value="{{data}}">{{data}}</mat-option>
+                            <mat-option *ngFor="let data of LengthList" value="{{data}}">{{data}}</mat-option>
                         </mat-select>
                     </div>
                 </div>
                 <div *ngIf="measure == 'temperature'" class="valueContent">
-                    <div>
+                    <div class="datacontent">
                         <p>from</p>
                         <input class="dataamount" > 
-                        <mat-select class="form-control">
-                            <option value="undefined" selected disabled>meter</option>
+                        <mat-select class="measumentSelect">
+                            <mat-option *ngFor="let data of temperatureList" value="{{data}}">{{data}}</mat-option>
                         </mat-select>
                     </div>
-                    <div>
+                    <div class="datacontent">
                         <p>to</p>
                         <input class="dataamount" > 
-                        <mat-select class="form-control">
-                            <option value="undefined" selected disabled>meter</option>
-                            <option *ngFor="let data of someList" value="{{data}}">{{data}}</option>
+                        <mat-select class="measumentSelect">
+                            <mat-option *ngFor="let data of temperatureList" value="{{data}}">{{data}}</mat-option>
                         </mat-select>
                     </div>
                 </div>
                 <div *ngIf="measure == 'volume'" class="valueContent">
-                    <div>
+                    <div class="datacontent">
                         <p>from</p>
                         <input class="dataamount" > 
 
-                        <mat-select class="form-control">
-                            <option value="undefined" selected disabled>meter</option>
-                            <option *ngFor="let data of someList" value="{{data}}">{{data}}</option>
+                        <mat-select class="measumentSelect">
+                            <mat-option *ngFor="let data of volumeList" value="{{data}}">{{data}}</mat-option>
                         </mat-select>
                     </div>
-                    <div>
+                    <div class="datacontent">
                         <p>to</p>
                         <input class="dataamount" > 
-
-                        <mat-select class="form-control">
-                            <option value="undefined" selected disabled>meter</option>
-                            <option *ngFor="let data of someList" value="{{data}}">{{data}}</option>
+                        <mat-select class="measumentSelect">
+                            <mat-option *ngFor="let data of volumeList" value="{{data}}">{{data}}</mat-option>
                         </mat-select>
                     </div>
                 </div>

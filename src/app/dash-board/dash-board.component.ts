@@ -11,10 +11,26 @@ export class DashBoardComponent implements OnInit {
   measure='length';
   ngOnInit(): void {
   }
-  someList=[
-    "meter",
+  LengthList=[
     "kilometer",
-    "centimeter"
+    "meter",
+    "Centimeter",
+    "Milimetre",
+    "Micrometre",
+    "Mile",
+    "Foot",
+    "Inches"
   ]
 
+    temperatureList=[
+    "Celsius",
+    "Fahrenheit",
+    "Kelvin"
+  ]
+  volumeList=[
+    "Litres",
+    "Millilitres",
+    "Gallons"
+   
+  ]
 }
