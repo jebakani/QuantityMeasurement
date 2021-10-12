@@ -1,26 +1,47 @@
-<div>
-   <header>
-       <p>Quanment</p>
-       <p>History</p>
+<div class="RegisterPage">
+    <mat-card class="mainContainer">
+   <header class="headercontent">
+       <p class="mainheader">Quanment</p>
+       <p class="sideHeader">History</p>
    </header>
-   <div>
-       <p>Welcome to Quantity Measurement</p>
+   <div class="subHeader">
+       <p class="heading">Welcome to Quantity Measurement</p>
    </div>
-   <div>
+   <div class="maincontent">
        <p>Choose</p>
        <div class="quantitycards">
        <mat-card>
            <img src="../../assets/scale.svg">
        </mat-card>
        <mat-card>
-        <img src="../../assets/scale.svg">
+        <img src="../../assets/beaker.svg">
     </mat-card>
     <mat-card>
-        <img src="../../assets/scale.svg">
+        <img src="../../assets/hot.svg">
     </mat-card>
 </div>
 <div>
-    <
+    <div>
+        <p>from</p>
+        <mat-form-field class="example-full-width" >
+            <input matInput >
+          </mat-form-field>
+        <select class="form-control" >
+            <option value="undefined" selected disabled>meter</option>
+            <option *ngFor="let data of someList"  value="{{data}}">{{data}}</option>
+        </select>
+        </div>
+        <div>
+            <p>to</p>
+            <mat-form-field class="example-full-width" >
+                <input matInput >
+              </mat-form-field>
+            <select class="form-control" >
+                <option value="undefined" selected disabled>meter</option>
+                <option *ngFor="let data of someList"  value="{{data}}">{{data}}</option>
+            </select>
+            </div>
 </div>
    </div>
+   </mat-card>
 </div>

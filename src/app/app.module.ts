@@ -6,6 +6,7 @@ import { DashBoardComponent } from './dash-board/dash-board.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import{MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,8 @@ import{MatCardModule} from '@angular/material/card';
     BrowserModule,
     AppRoutingModule,
     MatCardModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

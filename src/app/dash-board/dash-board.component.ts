@@ -11,5 +11,10 @@ export class DashBoardComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  someList=[
+    "meter",
+    "kilometer",
+    "centimeter"
+  ]
 
 }
