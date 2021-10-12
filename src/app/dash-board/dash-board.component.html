@@ -1,47 +1,86 @@
 <div class="RegisterPage">
     <mat-card class="mainContainer">
-   <header class="headercontent">
-       <p class="mainheader">Quanment</p>
-       <p class="sideHeader">History</p>
-   </header>
-   <div class="subHeader">
-       <p class="heading">Welcome to Quantity Measurement</p>
-   </div>
-   <div class="maincontent">
-       <p>Choose</p>
-       <div class="quantitycards">
-       <mat-card>
-           <img src="../../assets/scale.svg">
-       </mat-card>
-       <mat-card>
-        <img src="../../assets/beaker.svg">
-    </mat-card>
-    <mat-card>
-        <img src="../../assets/hot.svg">
-    </mat-card>
-</div>
-<div>
-    <div>
-        <p>from</p>
-        <mat-form-field class="example-full-width" >
-            <input matInput >
-          </mat-form-field>
-        <select class="form-control" >
-            <option value="undefined" selected disabled>meter</option>
-            <option *ngFor="let data of someList"  value="{{data}}">{{data}}</option>
-        </select>
+        <header class="headercontent">
+            <p class="mainheader">Quanment</p>
+            <p class="sideHeader">History</p>
+        </header>
+        <div class="subHeader">
+            <p class="heading">Welcome to Quantity Measurement</p>
         </div>
-        <div>
-            <p>to</p>
-            <mat-form-field class="example-full-width" >
-                <input matInput >
-              </mat-form-field>
-            <select class="form-control" >
-                <option value="undefined" selected disabled>meter</option>
-                <option *ngFor="let data of someList"  value="{{data}}">{{data}}</option>
-            </select>
+        <div class="maincontent">
+            <p>Choose</p>
+            <div class="quantitycards">
+                <mat-card class="qunatityContent"  [ngClass]="measure == 'length'? 'length':''" (click)="measure='length'">
+                    <img class="image" [src]="measure == 'length'? '../../assets/scale.svg':'../../assets/scale (1).svg' ">
+                    <p class="para">length</p>
+                </mat-card>
+                <mat-card class="qunatityContent" [ngClass]="measure == 'temperature'? 'temperature':''" (click)="measure='temperature'">
+                    <img class="image"  [src]="measure == 'temperature'? '../../../assets/hot.svg':'../../../assets/hot (1).svg' ">
+                    <p class="para">Temperature</p>
+                </mat-card>
+                <mat-card class="qunatityContent" [ngClass]="measure == 'volume'? 'volume':''" (click)="measure='volume'">
+                    <img class="image" [src]="measure == 'volume'? '../../../assets/beaker.svg':'../../assets/beaker (1).svg' ">
+                    <p class="para">Volume</p>
+                </mat-card>
             </div>
-</div>
-   </div>
-   </mat-card>
+            <div>
+                <div *ngIf="measure == 'length'" class="valueContent">
+                    <div>
+                        <p>from</p>
+                        <input class="dataamount" > 
+                        <mat-select class="form-control">
+                            <mat-option value="meter" selected disabled>meter</mat-option>
+                            
+                            <mat-option *ngFor="let data of someList" value="{{data}}">{{data}}</mat-option>
+                        </mat-select>
+                    </div>
+                    <div>
+                        <p>to</p>
+                        <input class="dataamount" > 
+                        <mat-select class="form-control">
+                            <mat-option value="meter" >meter</mat-option>
+                            <mat-option *ngFor="let data of someList" value="{{data}}">{{data}}</mat-option>
+                        </mat-select>
+                    </div>
+                </div>
+                <div *ngIf="measure == 'temperature'" class="valueContent">
+                    <div>
+                        <p>from</p>
+                        <input class="dataamount" > 
+                        <mat-select class="form-control">
+                            <option value="undefined" selected disabled>meter</option>
+                        </mat-select>
+                    </div>
+                    <div>
+                        <p>to</p>
+                        <input class="dataamount" > 
+                        <mat-select class="form-control">
+                            <option value="undefined" selected disabled>meter</option>
+                            <option *ngFor="let data of someList" value="{{data}}">{{data}}</option>
+                        </mat-select>
+                    </div>
+                </div>
+                <div *ngIf="measure == 'volume'" class="valueContent">
+                    <div>
+                        <p>from</p>
+                        <input class="dataamount" > 
+
+                        <mat-select class="form-control">
+                            <option value="undefined" selected disabled>meter</option>
+                            <option *ngFor="let data of someList" value="{{data}}">{{data}}</option>
+                        </mat-select>
+                    </div>
+                    <div>
+                        <p>to</p>
+                        <input class="dataamount" > 
+
+                        <mat-select class="form-control">
+                            <option value="undefined" selected disabled>meter</option>
+                            <option *ngFor="let data of someList" value="{{data}}">{{data}}</option>
+                        </mat-select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card>
 </div>

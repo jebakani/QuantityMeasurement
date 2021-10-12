@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DashBoardComponent implements OnInit {
 
   constructor() { }
-
+  measure='length';
   ngOnInit(): void {
   }
   someList=[
